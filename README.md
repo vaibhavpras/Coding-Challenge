@@ -85,7 +85,7 @@ Calculate its distance from all other points. If the distance is less than or eq
 
   
 
-![Image of Result Plot](ResultPlot.png)
+![Image of Result Plot](ResultPlot.PNG)
 
   
   
