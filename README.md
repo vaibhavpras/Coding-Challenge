@@ -1,4 +1,5 @@
 
+
 # ACM Research Coding Challenge (Fall 2020)
 
   
@@ -42,10 +43,9 @@ Since I had zero knowledge about the material, I had to start from the ground up
 The big question for me was whether I should use **K-means or DBSCAN** algorithms for this (I chose these two algorithms because I read they are easiest for a beginner to implement and would get the job done without much complexities). This question was quickly answered when I found an article on Towards Data Science which compared the two algorithms.
 <br/>
 I decided that **DBSCAN would be the most optimal** algorithm for this purpose and here are the reasons why:
-<br/>
 1. The given clusters are not spherical and are irregularly shaped. K-means works best when the clusters are spherical and DBSCAN works best with irregularly shaped clusters.
-<br/>
-2. I observed that there are a handful of outliers in the given dataset. K-means does not work well with outliers but DBscan does.
+
+3. I observed that there are a handful of outliers in the given dataset. K-means does not work well with outliers but DBscan does.
 
   
 
@@ -59,20 +59,16 @@ Now that I had chosen the algorithm that fits the purpose, implementing it was q
 
 Here's the pseudocode for the DBSCAN algorithm:
 
-<br/>
-1. Decide the value of eps and minPts. [eps (epsilon): The maxi radius that forms the neighbourhood of one core point; minPts: Minimum number of points inside a neighbourhood that are needed to form a cluster.]
-
-<br/>
+ 1. Decide the value of eps and minPts. [eps (epsilon): The maxi radius that forms the neighbourhood of one core point; minPts: Minimum number of points inside a neighbourhood that are needed to form a cluster.]
+ 
 2. For each point:
 Calculate its distance from all other points. If the distance is less than or equal to eps then mark that point as a neighbor of x. If the point gets a neighboring count greater than or equal to minPts, then mark it as a core point or visited.
 
-<br/>
 3. For each core point, if it not already assigned to a cluster than create a new cluster. Recursively find all its neighboring points and assign them the same cluster as the core point.
 
-<br/>
 4. Continue these steps until all the unvisited points are covered.
 
-<br/>
+
 
 
 **Note**: I have used a combination of code from these tutorials in my Jupyter notebook to implement the DBSCAN algorithm and the algorithm to find Epsilon: <br/>
