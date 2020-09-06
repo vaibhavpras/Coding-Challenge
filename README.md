@@ -36,11 +36,11 @@ Since I had zero knowledge about the material, I had to start from the ground up
 
   
 
-### K-Means vs DBscan?
+### K-Means vs DBSCAN?
 
   
 
-The big question for me was whether I should use **K-means or DBSCAN** algorithms for this (I chose these two algorithms because I read they are easiest for a beginner to implement and would get the job done without much complexities). This question was quickly answered when I found an article on Towards Data Science which compared the two algorithms.
+The big question for me was whether I should use **K-means or DBSCAN** algorithms for this (I chose these two algorithms because I read they are easiest for a beginner to implement and would get the job done without many complexities). This question was quickly answered when I found an article on *'Towards Data Science'* which compared the two algorithms.
 <br/>
 I decided that **DBSCAN would be the most optimal** algorithm for this purpose and here are the reasons why:
 1. The given clusters are not spherical and are irregularly shaped. K-means works best when the clusters are spherical and DBSCAN works best with irregularly shaped clusters.
@@ -59,7 +59,7 @@ Now that I had chosen the algorithm that fits the purpose, implementing it was q
 
 Here's the pseudocode for the DBSCAN algorithm:
 
- 1. Decide the value of eps and minPts. [eps (epsilon): The maxi radius that forms the neighbourhood of one core point; minPts: Minimum number of points inside a neighbourhood that are needed to form a cluster.]
+ 1. Decide the value of eps and minPts. [eps (epsilon): The max radius that forms the neighbourhood of one core point; minPts: Minimum number of points inside a neighbourhood that are needed to form a cluster.]
  
 2. For each point:
 Calculate its distance from all other points. If the distance is less than or equal to eps then mark that point as a neighbor of x. If the point gets a neighboring count greater than or equal to minPts, then mark it as a core point or visited.
@@ -71,7 +71,7 @@ Calculate its distance from all other points. If the distance is less than or eq
 
 
 
-**Note**: I have used a combination of code from these tutorials in my Jupyter notebook to implement the DBSCAN algorithm and the algorithm to find Epsilon: <br/>
+**Note**: I have used a combination of code from these tutorials in my Jupyter notebook to implement the DBSCAN algorithm and to find Epsilon: <br/>
 
 * https://www.geeksforgeeks.org/implementing-dbscan-algorithm-using-sklearn/ <br/>
 
