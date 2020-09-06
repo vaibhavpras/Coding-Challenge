@@ -58,13 +58,17 @@ Now that I had chosen the algorithm that fits the purpose, implementing it was q
 <br/>
 
 Here's the pseudocode for the DBSCAN algorithm:
+
 <br/>
 1. Decide the value of eps and minPts. [eps (epsilon): The maxi radius that forms the neighbourhood of one core point; minPts: Minimum number of points inside a neighbourhood that are needed to form a cluster.]
+
 <br/>
 2. For each point:
 Calculate its distance from all other points. If the distance is less than or equal to eps then mark that point as a neighbor of x. If the point gets a neighboring count greater than or equal to minPts, then mark it as a core point or visited.
+
 <br/>
 3. For each core point, if it not already assigned to a cluster than create a new cluster. Recursively find all its neighboring points and assign them the same cluster as the core point.
+
 <br/>
 4. Continue these steps until all the unvisited points are covered.
 
